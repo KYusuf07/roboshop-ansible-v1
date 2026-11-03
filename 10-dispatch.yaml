@@ -40,26 +40,26 @@
       args:
         chdir: /app
 
-    - name: create dispatch systemd service file
-      ansible.builtin.copy:
-        dest: /etc/systemd/system/dispatch.service
-        content: |
-          [Unit]
-          Description=Dispatch Service
-          After=network-online.target
+    # - name: create dispatch systemd service file
+    #   ansible.builtin.copy:
+    #     dest: /etc/systemd/system/dispatch.service
+    #     content: |
+    #       [Unit]
+    #       Description=Dispatch Service
+    #       After=network-online.target
 
-          [Service]
-          User=roboshop
-          Environment=AMQP_HOST={{ rabbitmq_host }}
-          Environment=AMQP_USER=roboshop
-          Environment=AMQP_PASS={{ rabbitmq_pass }}
-          ExecStart=/app/dispatch
-          SyslogIdentifier=dispatch
-          Restart=on-failure
-          RestartSec=5
+    #       [Service]
+    #       User=roboshop
+    #       Environment=AMQP_HOST={{ rabbitmq_host }}
+    #       Environment=AMQP_USER=roboshop
+    #       Environment=AMQP_PASS={{ rabbitmq_pass }}
+    #       ExecStart=/app/dispatch
+    #       SyslogIdentifier=dispatch
+    #       Restart=on-failure
+    #       RestartSec=5
 
-          [Install]
-          WantedBy=multi-user.target
+    #       [Install]
+    #       WantedBy=multi-user.target
 
     - name: start and enable dispatch service
       ansible.builtin.systemd:
