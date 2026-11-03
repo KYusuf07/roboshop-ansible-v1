@@ -1,0 +1,746 @@
+    results:
+    - ansible_loop_var: item
+      changed: false
+      changes: []
+      failed: false
+      instance_ids:
+      - i-0a43fd6ea4e84bd09
+      instances:
+      - ami_launch_index: 0
+        architecture: x86_64
+        block_device_mappings:
+        - device_name: /dev/sda1
+          ebs:
+            attach_time: '2026-11-03T08:57:43.343000+00:00'
+            delete_on_termination: true
+            ebs_card_index: 0
+            status: attached
+            volume_id: vol-07dadcf8ff3f79ab5
+        boot_mode: uefi-preferred
+        capacity_reservation_specification:
+          capacity_reservation_preference: open
+        client_token: 93c51c09e8bf48febcc6c8b3647247ee
+        cpu_options:
+          core_count: 1
+          threads_per_core: 2
+        current_instance_boot_mode: uefi
+        ebs_optimized: false
+        ena_support: true
+        enclave_options:
+          enabled: false
+        hibernation_options:
+          configured: false
+        hypervisor: xen
+        image_id: ami-0055977a6e828a4f4
+        instance_id: i-0a43fd6ea4e84bd09
+        instance_type: t3.micro
+        launch_time: '2026-11-03T08:57:43+00:00'
+        maintenance_options:
+          auto_recovery: default
+          reboot_migration: default
+        metadata_options:
+          http_endpoint: enabled
+          http_protocol_ipv6: disabled
+          http_put_response_hop_limit: 1
+          http_tokens: optional
+          instance_metadata_tags: disabled
+          state: applied
+        monitoring:
+          state: disabled
+        network_interfaces:
+        - association:
+            ip_owner_id: amazon
+            public_dns_name: ec2-44-222-164-34.compute-1.amazonaws.com
+            public_ip: 44.222.164.34
+          attachment:
+            attach_time: '2026-11-03T08:57:43+00:00'
+            attachment_id: eni-attach-0db2d8000ba6605e8
+            delete_on_termination: true
+            device_index: 0
+            network_card_index: 0
+            status: attached
+          description: ''
+          groups:
+          - group_id: sg-09b79849f4fc9bcd9
+            group_name: MongoDB
+          - group_id: sg-0a26c6973bcaca561
+            group_name: MyIP
+          interface_type: interface
+          ipv6_addresses: []
+          mac_address: 02:ff:f2:8d:9b:4b
+          network_interface_id: eni-05b2214a67de9b183
+          operator:
+            managed: false
+          owner_id: '301356686620'
+          private_dns_name: ip-172-31-2-33.ec2.internal
+          private_ip_address: 172.31.2.33
+          private_ip_addresses:
+          - association:
+              ip_owner_id: amazon
+              public_dns_name: ec2-44-222-164-34.compute-1.amazonaws.com
+              public_ip: 44.222.164.34
+            primary: true
+            private_dns_name: ip-172-31-2-33.ec2.internal
+            private_ip_address: 172.31.2.33
+          source_dest_check: true
+          status: in-use
+          subnet_id: subnet-096cb95ae39f358ca
+          vpc_id: vpc-0d90eb82a643b8fc5
+        network_performance_options:
+          bandwidth_weighting: default
+        operator:
+          hidden_by_default: false
+          managed: false
+        placement:
+          availability_zone: us-east-1a
+          availability_zone_id: use1-az1
+          group_name: ''
+          tenancy: default
+        platform_details: Red Hat Enterprise Linux
+        private_dns_name: ip-172-31-2-33.ec2.internal
+        private_dns_name_options:
+          enable_resource_name_dns_a_record: false
+          enable_resource_name_dns_aaaa_record: false
+          hostname_type: ip-name
+        private_ip_address: 172.31.2.33
+        product_codes: []
+        public_dns_name: ec2-44-222-164-34.compute-1.amazonaws.com
+        public_ip_address: 44.222.164.34
+        root_device_name: /dev/sda1
+        root_device_type: ebs
+        secondary_interfaces: []
+        security_groups:
+        - group_id: sg-09b79849f4fc9bcd9
+          group_name: MongoDB
+        - group_id: sg-0a26c6973bcaca561
+          group_name: MyIP
+        source_dest_check: true
+        state:
+          code: 16
+          name: running
+        state_transition_reason: ''
+        subnet_id: subnet-096cb95ae39f358ca
+        tags:
+          Name: ' MongoDB'
+        usage_operation: RunInstances:0010
+        usage_operation_update_time: '2026-11-03T08:57:43+00:00'
+        virtualization_type: hvm
+        vpc_id: vpc-0d90eb82a643b8fc5
+      invocation:
+        module_args:
+          aap_callback: null
+          access_key: null
+          availability_zone: null
+          aws_ca_bundle: /etc/pki/tls/certs/ca-bundle.crt
+          aws_config: null
+          count: null
+          cpu_credit_specification: null
+          cpu_options: null
+          debug_botocore_endpoint_logs: false
+          detailed_monitoring: null
+          ebs_optimized: null
+          endpoint_url: null
+          exact_count: null
+          filters:
+            image-id:
+            - ami-0055977a6e828a4f4
+            instance-state-name:
+            - pending
+            - running
+            - stopping
+            - stopped
+            subnet-id: subnet-096cb95ae39f358ca
+            tag:Name:
+            - ' MongoDB'
+          hibernation_options: false
+          iam_instance_profile: null
+          image: null
+          image_id: ami-0055977a6e828a4f4
+          instance_ids: []
+          instance_initiated_shutdown_behavior: null
+          instance_type: t3.micro
+          key_name: null
+          launch_template: null
+          metadata_options: null
+          name: ' MongoDB'
+          network: null
+          placement_group: null
+          profile: null
+          purge_tags: true
+          region: us-east-1
+          secret_key: null
+          security_group: null
+          security_groups:
+          - MyIP
+          - MongoDB
+          session_token: null
+          state: present
+          tags: null
+          tenancy: null
+          termination_protection: null
+          user_data: null
+          validate_certs: true
+          volumes: null
+          vpc_subnet_id: null
+          wait: true
+          wait_timeout: 600
+      item: MongoDB
+    - ansible_loop_var: item
+      changed: false
+      changes: []
+      failed: false
+      instance_ids:
+      - i-097c286d7eb078cb9
+      instances:
+      - ami_launch_index: 0
+        architecture: x86_64
+        block_device_mappings:
+        - device_name: /dev/sda1
+          ebs:
+            attach_time: '2026-11-03T08:57:47.671000+00:00'
+            delete_on_termination: true
+            ebs_card_index: 0
+            status: attached
+            volume_id: vol-0e627cc353ec3c4e7
+        boot_mode: uefi-preferred
+        capacity_reservation_specification:
+          capacity_reservation_preference: open
+        client_token: 7a10b5d3fcaf45e5869b1ca98296a75a
+        cpu_options:
+          core_count: 1
+          threads_per_core: 2
+        current_instance_boot_mode: uefi
+        ebs_optimized: false
+        ena_support: true
+        enclave_options:
+          enabled: false
+        hibernation_options:
+          configured: false
+        hypervisor: xen
+        image_id: ami-0055977a6e828a4f4
+        instance_id: i-097c286d7eb078cb9
+        instance_type: t3.micro
+        launch_time: '2026-11-03T08:57:47+00:00'
+        maintenance_options:
+          auto_recovery: default
+          reboot_migration: default
+        metadata_options:
+          http_endpoint: enabled
+          http_protocol_ipv6: disabled
+          http_put_response_hop_limit: 1
+          http_tokens: optional
+          instance_metadata_tags: disabled
+          state: applied
+        monitoring:
+          state: disabled
+        network_interfaces:
+        - association:
+            ip_owner_id: amazon
+            public_dns_name: ec2-13-219-247-167.compute-1.amazonaws.com
+            public_ip: 13.219.247.167
+          attachment:
+            attach_time: '2026-11-03T08:57:47+00:00'
+            attachment_id: eni-attach-09b5137c56b266896
+            delete_on_termination: true
+            device_index: 0
+            network_card_index: 0
+            status: attached
+          description: ''
+          groups:
+          - group_id: sg-0a26c6973bcaca561
+            group_name: MyIP
+          - group_id: sg-0d09b6fb39e646d93
+            group_name: Redis
+          interface_type: interface
+          ipv6_addresses: []
+          mac_address: 02:ff:fa:1e:b2:5f
+          network_interface_id: eni-0ea6bbb5edab41835
+          operator:
+            managed: false
+          owner_id: '301356686620'
+          private_dns_name: ip-172-31-9-25.ec2.internal
+          private_ip_address: 172.31.9.25
+          private_ip_addresses:
+          - association:
+              ip_owner_id: amazon
+              public_dns_name: ec2-13-219-247-167.compute-1.amazonaws.com
+              public_ip: 13.219.247.167
+            primary: true
+            private_dns_name: ip-172-31-9-25.ec2.internal
+            private_ip_address: 172.31.9.25
+          source_dest_check: true
+          status: in-use
+          subnet_id: subnet-096cb95ae39f358ca
+          vpc_id: vpc-0d90eb82a643b8fc5
+        network_performance_options:
+          bandwidth_weighting: default
+        operator:
+          hidden_by_default: false
+          managed: false
+        placement:
+          availability_zone: us-east-1a
+          availability_zone_id: use1-az1
+          group_name: ''
+          tenancy: default
+        platform_details: Red Hat Enterprise Linux
+        private_dns_name: ip-172-31-9-25.ec2.internal
+        private_dns_name_options:
+          enable_resource_name_dns_a_record: false
+          enable_resource_name_dns_aaaa_record: false
+          hostname_type: ip-name
+        private_ip_address: 172.31.9.25
+        product_codes: []
+        public_dns_name: ec2-13-219-247-167.compute-1.amazonaws.com
+        public_ip_address: 13.219.247.167
+        root_device_name: /dev/sda1
+        root_device_type: ebs
+        secondary_interfaces: []
+        security_groups:
+        - group_id: sg-0a26c6973bcaca561
+          group_name: MyIP
+        - group_id: sg-0d09b6fb39e646d93
+          group_name: Redis
+        source_dest_check: true
+        state:
+          code: 16
+          name: running
+        state_transition_reason: ''
+        subnet_id: subnet-096cb95ae39f358ca
+        tags:
+          Name: ' Redis'
+        usage_operation: RunInstances:0010
+        usage_operation_update_time: '2026-11-03T08:57:47+00:00'
+        virtualization_type: hvm
+        vpc_id: vpc-0d90eb82a643b8fc5
+      invocation:
+        module_args:
+          aap_callback: null
+          access_key: null
+          availability_zone: null
+          aws_ca_bundle: /etc/pki/tls/certs/ca-bundle.crt
+          aws_config: null
+          count: null
+          cpu_credit_specification: null
+          cpu_options: null
+          debug_botocore_endpoint_logs: false
+          detailed_monitoring: null
+          ebs_optimized: null
+          endpoint_url: null
+          exact_count: null
+          filters:
+            image-id:
+            - ami-0055977a6e828a4f4
+            instance-state-name:
+            - pending
+            - running
+            - stopping
+            - stopped
+            subnet-id: subnet-096cb95ae39f358ca
+            tag:Name:
+            - ' Redis'
+          hibernation_options: false
+          iam_instance_profile: null
+          image: null
+          image_id: ami-0055977a6e828a4f4
+          instance_ids: []
+          instance_initiated_shutdown_behavior: null
+          instance_type: t3.micro
+          key_name: null
+          launch_template: null
+          metadata_options: null
+          name: ' Redis'
+          network: null
+          placement_group: null
+          profile: null
+          purge_tags: true
+          region: us-east-1
+          secret_key: null
+          security_group: null
+          security_groups:
+          - MyIP
+          - Redis
+          session_token: null
+          state: present
+          tags: null
+          tenancy: null
+          termination_protection: null
+          user_data: null
+          validate_certs: true
+          volumes: null
+          vpc_subnet_id: null
+          wait: true
+          wait_timeout: 600
+      item: Redis
+    - ansible_loop_var: item
+      changed: false
+      changes: []
+      failed: false
+      instance_ids:
+      - i-02bef7ecb7c01304c
+      instances:
+      - ami_launch_index: 0
+        architecture: x86_64
+        block_device_mappings:
+        - device_name: /dev/sda1
+          ebs:
+            attach_time: '2026-11-03T08:57:52+00:00'
+            delete_on_termination: true
+            ebs_card_index: 0
+            status: attached
+            volume_id: vol-00cdc85167ad53a19
+        boot_mode: uefi-preferred
+        capacity_reservation_specification:
+          capacity_reservation_preference: open
+        client_token: f08166206f81441bb158ad08f8c05703
+        cpu_options:
+          core_count: 1
+          threads_per_core: 2
+        current_instance_boot_mode: uefi
+        ebs_optimized: false
+        ena_support: true
+        enclave_options:
+          enabled: false
+        hibernation_options:
+          configured: false
+        hypervisor: xen
+        image_id: ami-0055977a6e828a4f4
+        instance_id: i-02bef7ecb7c01304c
+        instance_type: t3.micro
+        launch_time: '2026-11-03T08:57:52+00:00'
+        maintenance_options:
+          auto_recovery: default
+          reboot_migration: default
+        metadata_options:
+          http_endpoint: enabled
+          http_protocol_ipv6: disabled
+          http_put_response_hop_limit: 1
+          http_tokens: optional
+          instance_metadata_tags: disabled
+          state: applied
+        monitoring:
+          state: disabled
+        network_interfaces:
+        - association:
+            ip_owner_id: amazon
+            public_dns_name: ec2-13-220-141-162.compute-1.amazonaws.com
+            public_ip: 13.220.141.162
+          attachment:
+            attach_time: '2026-11-03T08:57:52+00:00'
+            attachment_id: eni-attach-0aa9b096bb044f89a
+            delete_on_termination: true
+            device_index: 0
+            network_card_index: 0
+            status: attached
+          description: ''
+          groups:
+          - group_id: sg-0e7e0fd60ade21e4e
+            group_name: MySQL
+          - group_id: sg-0a26c6973bcaca561
+            group_name: MyIP
+          interface_type: interface
+          ipv6_addresses: []
+          mac_address: 02:ff:d3:36:3a:6d
+          network_interface_id: eni-0afe8233051c456b3
+          operator:
+            managed: false
+          owner_id: '301356686620'
+          private_dns_name: ip-172-31-0-137.ec2.internal
+          private_ip_address: 172.31.0.137
+          private_ip_addresses:
+          - association:
+              ip_owner_id: amazon
+              public_dns_name: ec2-13-220-141-162.compute-1.amazonaws.com
+              public_ip: 13.220.141.162
+            primary: true
+            private_dns_name: ip-172-31-0-137.ec2.internal
+            private_ip_address: 172.31.0.137
+          source_dest_check: true
+          status: in-use
+          subnet_id: subnet-096cb95ae39f358ca
+          vpc_id: vpc-0d90eb82a643b8fc5
+        network_performance_options:
+          bandwidth_weighting: default
+        operator:
+          hidden_by_default: false
+          managed: false
+        placement:
+          availability_zone: us-east-1a
+          availability_zone_id: use1-az1
+          group_name: ''
+          tenancy: default
+        platform_details: Red Hat Enterprise Linux
+        private_dns_name: ip-172-31-0-137.ec2.internal
+        private_dns_name_options:
+          enable_resource_name_dns_a_record: false
+          enable_resource_name_dns_aaaa_record: false
+          hostname_type: ip-name
+        private_ip_address: 172.31.0.137
+        product_codes: []
+        public_dns_name: ec2-13-220-141-162.compute-1.amazonaws.com
+        public_ip_address: 13.220.141.162
+        root_device_name: /dev/sda1
+        root_device_type: ebs
+        secondary_interfaces: []
+        security_groups:
+        - group_id: sg-0e7e0fd60ade21e4e
+          group_name: MySQL
+        - group_id: sg-0a26c6973bcaca561
+          group_name: MyIP
+        source_dest_check: true
+        state:
+          code: 16
+          name: running
+        state_transition_reason: ''
+        subnet_id: subnet-096cb95ae39f358ca
+        tags:
+          Name: ' MySQL'
+        usage_operation: RunInstances:0010
+        usage_operation_update_time: '2026-11-03T08:57:52+00:00'
+        virtualization_type: hvm
+        vpc_id: vpc-0d90eb82a643b8fc5
+      invocation:
+        module_args:
+          aap_callback: null
+          access_key: null
+          availability_zone: null
+          aws_ca_bundle: /etc/pki/tls/certs/ca-bundle.crt
+          aws_config: null
+          count: null
+          cpu_credit_specification: null
+          cpu_options: null
+          debug_botocore_endpoint_logs: false
+          detailed_monitoring: null
+          ebs_optimized: null
+          endpoint_url: null
+          exact_count: null
+          filters:
+            image-id:
+            - ami-0055977a6e828a4f4
+            instance-state-name:
+            - pending
+            - running
+            - stopping
+            - stopped
+            subnet-id: subnet-096cb95ae39f358ca
+            tag:Name:
+            - ' MySQL'
+          hibernation_options: false
+          iam_instance_profile: null
+          image: null
+          image_id: ami-0055977a6e828a4f4
+          instance_ids: []
+          instance_initiated_shutdown_behavior: null
+          instance_type: t3.micro
+          key_name: null
+          launch_template: null
+          metadata_options: null
+          name: ' MySQL'
+          network: null
+          placement_group: null
+          profile: null
+          purge_tags: true
+          region: us-east-1
+          secret_key: null
+          security_group: null
+          security_groups:
+          - MyIP
+          - MySQL
+          session_token: null
+          state: present
+          tags: null
+          tenancy: null
+          termination_protection: null
+          user_data: null
+          validate_certs: true
+          volumes: null
+          vpc_subnet_id: null
+          wait: true
+          wait_timeout: 600
+      item: MySQL
+    - ansible_loop_var: item
+      changed: false
+      changes: []
+      failed: false
+      instance_ids:
+      - i-002a841f45cdd5db9
+      instances:
+      - ami_launch_index: 0
+        architecture: x86_64
+        block_device_mappings:
+        - device_name: /dev/sda1
+          ebs:
+            attach_time: '2026-11-03T08:57:56.653000+00:00'
+            delete_on_termination: true
+            ebs_card_index: 0
+            status: attached
+            volume_id: vol-0d438a3e81d3ecd21
+        boot_mode: uefi-preferred
+        capacity_reservation_specification:
+          capacity_reservation_preference: open
+        client_token: ba294c6ad9cb4dc8be87d42423be9b3c
+        cpu_options:
+          core_count: 1
+          threads_per_core: 2
+        current_instance_boot_mode: uefi
+        ebs_optimized: false
+        ena_support: true
+        enclave_options:
+          enabled: false
+        hibernation_options:
+          configured: false
+        hypervisor: xen
+        image_id: ami-0055977a6e828a4f4
+        instance_id: i-002a841f45cdd5db9
+        instance_type: t3.micro
+        launch_time: '2026-11-03T08:57:56+00:00'
+        maintenance_options:
+          auto_recovery: default
+          reboot_migration: default
+        metadata_options:
+          http_endpoint: enabled
+          http_protocol_ipv6: disabled
+          http_put_response_hop_limit: 1
+          http_tokens: optional
+          instance_metadata_tags: disabled
+          state: applied
+        monitoring:
+          state: disabled
+        network_interfaces:
+        - association:
+            ip_owner_id: amazon
+            public_dns_name: ec2-3-231-151-1.compute-1.amazonaws.com
+            public_ip: 3.231.151.1
+          attachment:
+            attach_time: '2026-11-03T08:57:56+00:00'
+            attachment_id: eni-attach-0f897b7b572014cbd
+            delete_on_termination: true
+            device_index: 0
+            network_card_index: 0
+            status: attached
+          description: ''
+          groups:
+          - group_id: sg-02f263c86cd306055
+            group_name: RabbitMQ
+          - group_id: sg-0a26c6973bcaca561
+            group_name: MyIP
+          interface_type: interface
+          ipv6_addresses: []
+          mac_address: 02:ff:f3:69:5b:85
+          network_interface_id: eni-0e007baa4a9e86680
+          operator:
+            managed: false
+          owner_id: '301356686620'
+          private_dns_name: ip-172-31-4-244.ec2.internal
+          private_ip_address: 172.31.4.244
+          private_ip_addresses:
+          - association:
+              ip_owner_id: amazon
+              public_dns_name: ec2-3-231-151-1.compute-1.amazonaws.com
+              public_ip: 3.231.151.1
+            primary: true
+            private_dns_name: ip-172-31-4-244.ec2.internal
+            private_ip_address: 172.31.4.244
+          source_dest_check: true
+          status: in-use
+          subnet_id: subnet-096cb95ae39f358ca
+          vpc_id: vpc-0d90eb82a643b8fc5
+        network_performance_options:
+          bandwidth_weighting: default
+        operator:
+          hidden_by_default: false
+          managed: false
+        placement:
+          availability_zone: us-east-1a
+          availability_zone_id: use1-az1
+          group_name: ''
+          tenancy: default
+        platform_details: Red Hat Enterprise Linux
+        private_dns_name: ip-172-31-4-244.ec2.internal
+        private_dns_name_options:
+          enable_resource_name_dns_a_record: false
+          enable_resource_name_dns_aaaa_record: false
+          hostname_type: ip-name
+        private_ip_address: 172.31.4.244
+        product_codes: []
+        public_dns_name: ec2-3-231-151-1.compute-1.amazonaws.com
+        public_ip_address: 3.231.151.1
+        root_device_name: /dev/sda1
+        root_device_type: ebs
+        secondary_interfaces: []
+        security_groups:
+        - group_id: sg-02f263c86cd306055
+          group_name: RabbitMQ
+        - group_id: sg-0a26c6973bcaca561
+          group_name: MyIP
+        source_dest_check: true
+        state:
+          code: 16
+          name: running
+        state_transition_reason: ''
+        subnet_id: subnet-096cb95ae39f358ca
+        tags:
+          Name: ' RabbitMQ'
+        usage_operation: RunInstances:0010
+        usage_operation_update_time: '2026-11-03T08:57:56+00:00'
+        virtualization_type: hvm
+        vpc_id: vpc-0d90eb82a643b8fc5
+      invocation:
+        module_args:
+          aap_callback: null
+          access_key: null
+          availability_zone: null
+          aws_ca_bundle: /etc/pki/tls/certs/ca-bundle.crt
+          aws_config: null
+          count: null
+          cpu_credit_specification: null
+          cpu_options: null
+          debug_botocore_endpoint_logs: false
+          detailed_monitoring: null
+          ebs_optimized: null
+          endpoint_url: null
+          exact_count: null
+          filters:
+            image-id:
+            - ami-0055977a6e828a4f4
+            instance-state-name:
+            - pending
+            - running
+            - stopping
+            - stopped
+            subnet-id: subnet-096cb95ae39f358ca
+            tag:Name:
+            - ' RabbitMQ'
+          hibernation_options: false
+          iam_instance_profile: null
+          image: null
+          image_id: ami-0055977a6e828a4f4
+          instance_ids: []
+          instance_initiated_shutdown_behavior: null
+          instance_type: t3.micro
+          key_name: null
+          launch_template: null
+          metadata_options: null
+          name: ' RabbitMQ'
+          network: null
+          placement_group: null
+          profile: null
+          purge_tags: true
+          region: us-east-1
+          secret_key: null
+          security_group: null
+          security_groups:
+          - MyIP
+          - RabbitMQ
+          session_token: null
+          state: present
+          tags: null
+          tenancy: null
+          termination_protection: null
+          user_data: null
+          validate_certs: true
+          volumes: null
+          vpc_subnet_id: null
+          wait: true
+          wait_timeout: 600
+      item: RabbitMQ
+    skipped: false
