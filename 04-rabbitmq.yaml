@@ -20,7 +20,7 @@
         state: started
         enabled: yes
 
-    - name: create rabbitmq user
+    - name: create rabbitmq user and set administrator tag
       community.rabbitmq.rabbitmq_user:
         user: roboshop
         password: roboshop123
@@ -28,6 +28,7 @@
         configure_priv: .*
         read_priv: .*
         write_priv: .*
+        tags: administrator # This handles the 'set_user_tags' requirement idempotently
         state: present
 
     - name: enable RabbitMQ Management UI plugin
