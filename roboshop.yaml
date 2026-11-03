@@ -4,7 +4,7 @@
   vars:
     # ansible-playbook roboshop.yaml -e "instances=['mongodb', 'redis']"
     # ansible-playbook roboshop.yaml -e "action=delete"
-    instances: ["Catalogue", "User", "Cart",  "Shipping", "Payment", "Dispatch", "Frontend" ]
+    instances: ["MongoDB", "Redis", "MySQL", Rabbitmq", Catalogue", "User", "Cart",  "Shipping", "Payment", "Dispatch", "Frontend" ]
     action: create
     domain_name: vibelearning.online
     ami_id: ami-0055977a6e828a4f4
@@ -42,7 +42,7 @@
     amazon.aws.route53:
       state: present
       zone: "{{ domain_name }}"
-      record: "{{ domain_name }}" # daws92s.store points to frontend public IP
+      record: "{{ domain_name }}" 
       type: A
       ttl: 1
       value: "{{ item.instances[0].public_ip_address }}"
