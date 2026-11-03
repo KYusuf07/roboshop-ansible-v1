@@ -7,6 +7,7 @@ rabbitmq_host: rabbitmq.vibelearning.online
 catalogue_host: catalogue.vibelearning.online
 user_host: user.vibelearning.online
 cart_host: cart.vibelearning.online
+dispatch_hopt: dispatch.vibelearning.yaml
 shipping_host: shipping.vibelearning.online
 payment_host: payment.vibelearning.online
 mysql_root_password: RoboShop@1
