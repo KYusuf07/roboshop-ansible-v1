@@ -3,7 +3,7 @@
   become: yes
   vars:
     # Pass these at runtime or define them in your inventory/group_vars
-    rabbitmq_host: "RABBITMQ-SERVER-IPADDRESS"
+    rabbitmq_host: "rabbitmq.vibelearning.online"
     rabbitmq_pass: "roboshop123"
   tasks:
     - name: install golang
